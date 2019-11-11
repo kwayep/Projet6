@@ -25,3 +25,19 @@ class Client:
     def __str__(self):        
         return "client: " + self.__prenom + " " + self.__nom
  
+    #cette methode rajoute un compte dans la liste du client    
+    #elle s'assure egalement que le compte ait bien son client   
+ 
+    def ajouteCompte(self,compte):         
+        self.__mesComptes.append(compte)         
+        compte.assigneTitulaire(self) 
+ 
+    def identifieCompte(self):         
+        print ("Sur quel compte ?")         
+        x=input("?") 
+	#cette instruction permet de lire un string                      
+        #a l'ecran en promptant avec un "?"         
+        for c in self.__mesComptes:             
+            if c.donneNumero() == x:                                  
+                break         
+            return c 
