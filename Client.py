@@ -41,3 +41,11 @@ class Client:
             if c.donneNumero() == x:                                  
                 break         
             return c 
+    
+    def versement(self):
+        c = self.indification()
+        print("quel montant !")
+        x = int(input(""))
+        c.versement(x)
+        return x
+
