@@ -43,7 +43,7 @@ class Client:
             return c 
     
     def versement(self):
-        c = self.indification()
+        c = self.identifieCompte()
         print("quel montant !")
         x = int(input(""))
         c.versement(x)
