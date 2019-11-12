@@ -49,3 +49,9 @@ class Client:
         c.versement(x)
         return x
 
+    def retire(self)
+        c = self.identifieCompte()
+        print("quel montant ? ")
+        x = int(intput(""))
+        c.retire(x)
+
