@@ -15,3 +15,13 @@ class CompteBancaire(object):
         self._numero=CompteBancaire._modele + \
             str(CompteBancaire._nombreComptes)
         CompteBancaire._nombreComptes+=1
+
+    def depot(self,montant):
+
+    	self.solde+=montant
+
+    def retrait(self,montant):
+    	self.solde-=montant
+
+    def afficher(self):
+    	print("le solde du compte bancaire  %s est de %.2f FRCS " %(self.nom,self.solde))
